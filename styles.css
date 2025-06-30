@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #FBCEB1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*add new font*/
+@font-face {
+    font-family: 'Digital-7';
+    src: url('fonts/digital-7\ \(mono\).ttf') format('truetype');
+}
+
+
+.cal {
+    /*style*/
+    background-color:#f8966f;
+    width: 500px;
+    height: 750px;
+    margin: 200px auto 0 auto;
+    border-radius: 20px;/*for all radius*/
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(54, 27, 27, 0.317);
+    /*display*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*style of the window:*/
+.window {
+    /*style*/
+    width: calc(100%-30px);
+    height: 150px;
+    margin: 20px;
+    background-color: rgb(72, 70, 57);
+    border-radius: 20px;
+    /*define the font style inside*/
+    font-size: 48px;
+    text-align: right;
+    /*new font(Digital-7)*/
+    font-family: 'Digital-7', monospace;    
+    /*make the font in the window glow in green*/
+    color: #39ff14; 
+    text-shadow:
+      0 0 5px #39ff14,
+      0 0 10px #39ff14;
+}
+
+
+
+#showStoredNumbers {
+    margin-top: 15px;
+    margin-right: 10px;
+    min-height: 48px;
+}
+
+#showPushedButtons {
+    font-size: 75px;
+    margin-right: 10px;
+}
+
+
+/*style of the buttons:*/
+.btns {
+    width: calc(100%-30px);
+    margin: 0 15px 15px 15px;   
+    flex: 1;
+    /*display*/
+    display: flex;
+    flex-direction: column;
+}
+
+.btns-row {
+    flex: 1;
+    /*display*/
+    display: flex;    
+}
+
+.btn{
+    background-color: #f8966f;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    flex: 1;
+    border-radius: 20px;
+    margin: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    border: 1px solid #fa8d62;
+}
+
+.btn:active{
+    transform: translate(2px, 2px)
+}
+
+/*make the '=' button twice larger*/
+#btn-equal {
+    flex: 2.18;/*dont know how to make this right*/
+}
